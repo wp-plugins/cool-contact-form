@@ -1,0 +1,13 @@
+.coolformerror {
+  background: url(../img/error.png) no-repeat;
+  height: 14px;
+  color: #CC0000;
+  padding: 0 0 0 20px;
+}
+
+.coolformsuccess {
+  background: url(../img/success.png) no-repeat;
+  height: 14px;
+  color: #00CC00;
+  padding: 0 0 0 20px;
+}
