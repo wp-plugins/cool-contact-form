@@ -13,7 +13,6 @@ if($_GET['mailsent'] == 1)
 }
 ?>
 <h2><?php echo get_option('cool_title_option'); ?></h2>
-<p>Fill this form or you can directly email me at: nischalmaniar [at] gmail [dot] com</p>
 <form name='conForm' id='conForm' method="POST" action="./?mailsent=1" onsubmit="return validateform(this)">
 <div id="errormessage"><?php echo $errormessage; ?></div>
 <p><label class='cLabel'> Name</label></p><p><input class="democlass" type='text' size="50" name='cName' id='cName' value="<?php echo $_POST[cName]; ?>"/></p>
