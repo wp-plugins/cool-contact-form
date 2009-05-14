@@ -15,7 +15,7 @@ function add_coolform_js_and_css()
 
 function addContactForm($content)
 {
-  if(false !== strpos($content, '<!--contact form-->'))
+  if(false !== strpos($content, '<--contact form-->'))
   {
     include('coolform.php');
   }
