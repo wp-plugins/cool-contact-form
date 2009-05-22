@@ -1,42 +1,42 @@
-var reg = new RegExp("@");
-var email = document.getElementById('cEmail').value;
 
-function validateform(thisform)
+function validateform()
 {
-  var fields = '';
+  var errormsg = "Missing Fields: ";
   var errorcount = 0;
-  if(document.getElementById('cName').value == "")
+  if(document.conForm.cName.value.replace(/^\s+|\s+$/g, '') == "")
   {
     errorcount++;
     if(errorcount > 1)
-        fields = fields + " and Name";
+        errormsg = errormsg + " and Name";
     else
-        fields = fields + "Name";
+        errormsg = errormsg + "Name";
   }
 
-  if(document.getElementById('cEmail').value == "" || !reg.test(email))
+  if(document.conForm.cEmail.value.replace(/^\s+|\s+$/g, '') == "")
   {
     errorcount++;
     if(errorcount > 1)
-        fields = fields + " and Email";
+        errormsg = errormsg + " and Email";
     else
-        fields = fields + "Email";
+        errormsg = errormsg + "Email";
   }
 
-  if(document.getElementById('cMsg').value == "")
+  if(document.conForm.cMsg.value.replace(/^\s+|\s+$/g, '') == "")
   {
     errorcount++;
     if(errorcount > 1)
-        fields = fields + " and Message";
+        errormsg = errormsg + " and Message";
     else
-        fields = fields + "Message";
+        errormsg = errormsg + "Message";
   }
 
   if(errorcount > 0)
   {
-    document.getElementById('errormessage').innerHTML = '<span class="coolformerror">Invalid Fields: '+fields+'</span>';
+    document.getElementById('errormessage').innerHTML = '<span class="coolformerror">'+errormsg+'</span>';
     return false;
   }
-
-  return true;
+  else
+  {
+    return true;
+  }
 }
